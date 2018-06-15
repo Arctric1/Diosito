@@ -1,0 +1,182 @@
+# This is the configuration file for a leaderboard page.
+
+
+# The description of the page as it appears in a search engine description.
+description: "Leaderboards"
+
+# The title of the page as it appears in the tab of your browser.
+page_title: "Leaderboard"
+
+# Messages
+messages:
+    # Time options. These are used in the dropdown select menu.
+    alltime: "all time"
+    monthly: "this month"
+    weekly: "this week"
+    daily: "today"
+    # High formats as they appear when enabling 'format_high_numbers'.
+    high_formats:
+        thousands_format: "k"
+        millions_format: "M"
+        billions_format: "B"
+        trillions_format: "T"
+        quadrillions_format: "QD"
+        quintillions_format: "QT"
+        sextillions_format: "SX"
+        septillions_format: "SP"
+    # Time formats
+    time_formats: 
+        time_format_days: "{days} days, {hours} hours, {minutes} minutes"
+        time_format_hours: "{hours} hours, {minutes} minutes"
+        time_format_minutes: "{minutes} minutes"
+    
+# Tables that appear as you want. You can remove and add as much tables as you want.
+leaderboards:
+    # Name of the table. This name appears in the header and the caption if no other text is set.
+    "My Server":
+        # Columns of the table. You can remove and add as much columns as you want.
+        # The configuration works on a default-based system. This means that there's a set amount of default values.
+        # If you didn't specifically set the setting in the config of a column, the default value will be applied.
+        # If a value has been set for the table, this value will be applied for all columns where this value isn't set.
+        # Explanation of these settings can be found under the defaults section.
+        # Tables also use this system, which means that you can specifically set a setting for a certain table.
+        columns:
+            # Name of your row as it appears in the first column.
+            "Time played":
+                # The name of the statistic as used in-game.
+                type: "played"
+                statistic_type: "time"
+                width: 13%
+            "Kills":
+                type: "kills"
+            "Deaths":
+                type: "deaths"
+            "Walked Blocks":
+                type: "walk"
+            "Balance":
+                type: "balance"
+                format: "${amount}"
+                format_high_numbers: true
+            "Level":
+                type: "bl-level"
+            "Items dropped":
+                type: "drop"
+        settings:   
+            count: 20
+            enable_search_bar: true
+            enable_upper_pagination: true
+            enable_lower_pagination: true
+            enable_caption: false
+            enable_header: true
+            enable_column_select: false
+            enable_select: true
+            enable_index_column: true
+    "My second server":
+        columns:
+            "Kills":
+                type: "kills"
+            "Deaths":
+                type: "deaths"
+            "Walked Blocks":
+                type: "walk"
+            "Balance":
+                type: "balance"
+                format: "${amount}"
+                format_high_numbers: true
+        settings:    
+            count: 20
+            enable_select: true
+defaults:
+    # Available time periods to select from using the dropdown menu.
+    available_time_types: ["alltime", "monthly", "weekly", "daily"]
+    # The width of the table.
+    table_width: 800px;
+    # How many players are shown in the table.
+    count: 20
+    # Whether there should be a select bar
+    enable_select: true
+    # Text in the select bar. 
+    # {time} represents the time select dropdown menu.
+    # {type} represents the type select dropdown menu.
+    select_text: "Select for {time} order by {type}"
+    # Whether there should be a bar to select the page above the table.
+    enable_upper_pagination: true
+    # Whether there should be a bar to select the page under the table.
+    enable_lower_pagination: true
+    # How many pages appear in the bar to select pages.
+    pagination_size: 10
+    # Whether there should be a search bar above the table.
+    enable_search_bar: true
+    # Placeholder of the text in this search bar.
+    search_bar_button_placeholder: "Username"
+    # Text in the search button of this search bar.
+    search_bar_button_text: "Search Player"
+    # URL that this global search bar redirects to.
+    search_bar_url: "/player/{name}"
+    # Whether a little image of the player's skull should be displayed next to the player's name.
+    enable_skull: true
+    # The URL of the skull.
+    skull_url: "https://crafatar.com/avatars/{name}"
+    # Whether there should be a column indicating the index.
+    enable_index_column: true
+    # Width of the index column.
+    index_column_width: 6%
+    # Text in the header of the index column.
+    index_column_text: ""
+    # Format of the index column
+    index_column_format: "{rank}"
+    # Width of the player column.
+    player_column_width: 10%
+    # Text in the column with the player name.
+    player_column_text: "Player"
+    # Whether the table should have a caption or not.    
+    enable_caption: false
+    # Whether the caption should have custom text instead of the name of the table.
+    enable_caption_custom_text: false
+    # Custom text of the caption if 'enable_caption_custom_text' is set to true.
+    caption_custom_text: "Leaderboard"
+    # Whether the table should have a header or not. The name of this table will be displayed in the header.
+    enable_header: true
+    # Whether you can press the header of the column to order by that statistic.
+    enable_column_select: false
+    # Whether you can press on a player's name to go to his profile.
+    enable_click_name: true
+    # URL that you get redirected to when clicking on the player's name.
+    click_name_url: "/player/{name}"
+    # Default column settings
+    columns:
+        # Tables that will be used for looking up data of this column.
+        tables:
+            alltime: "leaderheadsplayersdata_alltime"
+            monthly: "leaderheadsplayersdata_monthly"
+            weekly: "leaderheadsplayersdata_weekly"
+            daily: "leaderheadsplayersdata_daily"
+        # Format of this column.
+        format: "{amount}"
+        # Statistic type of this column. Use 'default' for normal statistics and 'time' for time related statistics.
+        statistic_type: "default"
+        # How many decimals should be shown after the decimal point.
+        decimals: 0
+        # Whether there should be a dot between every 3 digits.
+        format_3_digits: false
+        # Whether the statistic should be formatted with the values from 'high_formats'.
+        format_high_numbers: false
+        # Width of this column.
+        width: 8%;
+        # Whether this column should stay to the time_type from the config, even when the dropdown menu is used
+        keep_time_type: false
+        # The selected time period of this statistic. Options are 'alltime', 'monthly', 'weekly' and 'daily'.
+        time_type: "alltime"
+settings:
+    # Whether there should be a page header above the tables.
+    enable_page_header: true
+    # Text of the page header.
+    page_header_text: "Leaderboards"
+    # Whether there should be a global search bar above the tables.
+    enable_global_search_bar: true
+    # Placeholder of the text in the global search bar.
+    global_search_bar_button_placeholder: "Username"
+    # Text in the search button of the global search bar.
+    global_search_bar_button_text: "Search Player"
+    # URL that the global search bar redirects to.
+    global_search_bar_url: "/player/{name}"

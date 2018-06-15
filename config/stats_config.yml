@@ -1,0 +1,151 @@
+# This is the configuration file for a personal stats page.
+
+
+# The description of the page as it appears in a search engine description.
+description: "Player stats"
+
+# The title of the page as it appears in the tab of your browser.
+page_title: "{name} - Stats"
+
+# Messages
+messages:
+    # Time options. These are used in the dropdown select menu.
+    alltime: "all time"
+    month: "this month"
+    week: "this week"
+    day: "today"
+    # High formats as they appear when enabling 'format_high_numbers'.
+    high_formats:
+        thousands_format: "k"
+        millions_format: "M"
+        billions_format: "B"
+        trillions_format: "T"
+        quadrillions_format: "QD"
+        quintillions_format: "QT"
+        sextillions_format: "SX"
+        septillions_format: "SP"
+    # Last seen time message
+    last_seen: 
+        year_ago: "%y year ago"
+        years_ago: "%y years ago"
+        month_ago: "%m month ago"
+        months_ago: "%m months ago"
+        day_ago: "%d day ago"
+        days_ago: "%d days ago"
+        hour_ago: "%h hour ago"
+        hours_ago: "%h hours ago"
+        minute_ago: "%i minute ago"
+        minutes_ago: "%i minutes ago"
+        just_now: "just now"
+        never_joined: "Never joined"
+    # Last seen message.
+    last_seen_message: "Last seen: {time}"
+    # The message that appears instead of the name if the searched player doesn't exist.
+    not_exist: "This player does not exist"
+    
+# Tables that appear as you want. You can remove and add as much tables as you want.
+tables:
+    # Name of the table. This name appears in the header and the caption if no other text is set.
+    "My first server":
+        # Rows of the table. You can remove and add as much rows as you want.
+        # The configuration works on a default-based system. This means that there's a set amount of default values.
+        # If you didn't specifically set the setting in the config of a row, the default value will be applied.
+        # Explanation of these settings can be found under the defaults section.
+        # Tables also use this system, which means that you can specifically set a setting for a certain table.
+        rows:
+            # Name of your row as it appears in the first column
+            "Kills":
+                # The name of the statistic as used in-game
+                type: "kills"
+            "Deaths":
+                type: "deaths"
+            "Walked Blocks":
+                type: "walk"
+            "Balance":
+                type: "balance"
+                format: "${amount}"
+                format_high_numbers: true
+        settings:    
+            table_width: 400px;
+    "My second server":
+        rows:
+            "Weekly blocks walked":
+                type: "kills"
+                time_type: "weekly"
+            "Deaths":
+                type: "deaths"
+            "Level":
+                type: "bl-level"
+            "Items dropped":
+                type: "drop"
+        settings:    
+            table_width: 400px;
+    "My third server":
+        rows:
+            "Time played":
+                type: "played"
+                statistic_type: "time"
+            "Blocks mined":
+                type: "ez-blocks"
+            "Walked Blocks":
+                type: "walk"
+        settings:    
+            table_width: 400px
+defaults:
+    # The width of the table.
+    table_width: 400px;
+    # Whether the table should have a caption or not.
+    enable_caption: false
+    # Whether the caption should have custom text instead of the name of the table.
+    enable_caption_custom_text: false
+    # Custom text of the caption if 'enable_caption_custom_text' is set to true.
+    caption_custom_text: "Leaderboard"
+    # Whether the table should have a header or not. The name of this table will be displayed in the header.
+    enable_header: true
+    # Width of the column where the name of the statistic appears.
+    index_width: 50%
+    # Messages for formatting time
+    messages: 
+        time_format_days: "%a days, %h hours, %i minutes"
+        time_format_hours: "%h hours, %i minutes"
+        time_format_minutes: "%i minutes"
+    # Default row settings
+    rows:
+        # Tables that will be used for looking up data of this row.
+        tables:
+            alltime: "leaderheadsplayersdata_alltime"
+            monthly: "leaderheadsplayersdata_monthly"
+            weekly: "leaderheadsplayersdata_weekly"
+            daily: "leaderheadsplayersdata_daily"
+        # Format of this row.
+        format: "{amount}"
+        # Statistic type of this row. Use 'default' for normal statistics and 'time' for time related statistics.
+        statistic_type: "default"
+        # The selected time period of this statistic. Options are 'alltime', 'monthly', 'weekly' and 'daily'.
+        time_type: "alltime"
+        # How many decimals should be shown after the decimal point.
+        decimals: 0
+        # Whether there should be a dot between every 3 digits.
+        format_3_digits: false
+        # Whether the statistic should be formatted with the values from 'high_formats'.
+        format_high_numbers: false
+        # Width of the statistic column of this row.
+        width: 50%;
+        
+settings:
+    # Whether there should be a page header above the tables.
+    enable_page_header: true
+    # Text of the page header.
+    page_header_text: "Player Statistics"
+    # Whether there should be a global search bar above the tables.
+    enable_global_search_bar: true
+    # Placeholder of the text in the global search bar.
+    global_search_bar_button_placeholder: "Username"
+    # Text in the search button of the global search bar.
+    global_search_bar_button_text: "Search Player"
+    # URL that the global search bar redirects to.
+    global_search_bar_url: "/player/{name}"
+    # Interval in minutes for when a player will be seen as 'just now' online.
+    last_seen_interval: 2
+    # URL of the player picture that appears.
+    player_picture: "https://crafatar.com/renders/body/{name}?overlay=true"

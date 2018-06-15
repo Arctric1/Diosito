@@ -1,0 +1,122 @@
+.table-leaderboard {
+    background-color: white;
+    margin-bottom: 10px!important;
+    max-width: none!important;
+    clear: both;
+    width: 100%;
+}
+.input-group, .search-field, .search-button {
+    height: 34px;
+}
+.search-form {
+    margin-bottom: 10px;
+}
+td {
+    display: table-cell;
+    padding: 10px;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.skull {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 2px;
+    margin-right: 8px;
+}
+.pagination {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.leaderboard-container {
+    margin-bottom: 50px;
+    width: 100%;
+}
+.table-container {
+    clear: both;
+    overflow: auto;
+    overflow-y: hidden;
+}
+.container-pack {
+    display: inline-flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start; 
+    justify-content: flex-start;
+    -webkit-align-content: flex-start;
+    align-content: flex-start;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+body {
+    width: 100%;
+    background-color: white;
+    font-family: Lato, Helvetice, Arial;
+}
+select {
+    font-weight: normal;
+}
+select.input-sm {
+    display: inline-block;
+    width: auto;
+    height: 34px;
+    margin-bottom: 0px;
+	padding-top: 4px;
+}
+.pagination > li { 
+    cursor: pointer; 
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.pagination > li.disabled { 
+    cursor: none; 
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+h1 {
+    font-size: 42px;
+}
+h2 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.row-fluid {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+.header-search-bar {
+    margin-top: 35px;
+    margin-bottom: 5px;
+}
+.page-header {
+    margin: 40px 0 10px;
+}
+caption {
+    border: 1px solid #ddd;
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+    vertical-align: middle;
+    background-color: #f9f9f9;
+    color: #333;
+}
+.input-sm, .btn-sm, .btn-group-sm > .btn {
+    font-size: 14px;
+}
+label {
+    margin-bottom: 10px;
+    font-size: 16px;
+}

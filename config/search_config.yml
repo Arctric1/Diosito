@@ -1,0 +1,29 @@
+# This is the configuration file for a search page.
+
+
+# The description of the page as it appears in a search engine description.
+description: "Player stats"
+
+# The title of the page as it appears in the tab of your browser.
+page_title: "Statistics"
+
+# Placeholder of the text in the search bar.
+search_bar_button_placeholder: "Username"
+# Text in the search button of the search bar.
+search_bar_button_text: "Search Player"
+# URL that the search bar redirects to.
+search_bar_url: "/player/{name}"
+        
+settings:
+    # Whether there should be a page header.
+    enable_page_header: true
+    # Text of the page header.
+    page_header_text: "Player Statistics"
+    # Whether there should be a global search bar in the page header.
+    enable_global_search_bar: false
+    # Placeholder of the text in the global search bar.
+    global_search_bar_button_placeholder: "Username"
+    # Text in the search button of the global search bar.
+    global_search_bar_button_text: "Search Player"
+    # URL that the global search bar redirects to.
+    global_search_bar_url: "/player/{name}"
