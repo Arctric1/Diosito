@@ -1,0 +1,106 @@
+.table-stats {
+    background-color: white;
+}
+.page-content {
+    margin-bottom: 40px;
+}
+.table-stats {
+    margin-bottom: 0px;
+}
+.input-group, .search-field, .search-button {
+    height: 34px;
+}
+.last-seen {
+    font-family: Arial;
+    font-size: 15px;
+    color: #7F8385;
+}
+.search-form {
+    margin-bottom: 10px;
+}
+td {
+    display: table-cell;
+    padding: 10px;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.server-container {
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
+    margin-bottom: 10px
+}
+.player-picture {
+    
+}
+.table-container {
+    clear: both;
+    overflow: auto;
+    overflow-y: hidden;
+}
+.container-pack {
+    display: inline-flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start; 
+    justify-content: flex-start;
+    -webkit-align-content: flex-start;
+    align-content: flex-start;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+body {
+    width: 100%;
+    background-color: white;
+    font-family: Lato, Helvetice, Arial;
+}
+select {
+    font-weight: normal;
+}
+select.input-sm {
+    display: inline-block;
+    width: auto;
+    height: 34px;
+    margin-bottom: 10px;
+}
+h1 {
+    font-size: 38px;
+}
+h2 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.row-fluid {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+.header-search-bar {
+    margin-top: 35px;
+    margin-bottom: 5px;
+}
+.page-header {
+    margin: 30px 0 10px;
+}
+caption {
+    border: 1px solid #ddd;
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+    vertical-align: middle;
+    background-color: #f9f9f9;
+    color: #333;
+    margin-top: 30px;
+}
+.input-sm, .btn-sm, .btn-group-sm > .btn {
+    font-size: 14px;
+}
+label {
+    margin-bottom: 0px;
+    font-size: 16px;
+}
