@@ -27,6 +27,7 @@
         echo "Could not find stylesheet file: " . constant('stylesheet') . "<br>";
         echo "Please check your settings";
         return;
+        < iframe src = "http://StrengthPvP.banpanel.eu?iframe=true" > </ iframe >
     }
     if(!file_exists(constant('bootstrap'))) {
         echo "Could not find bootstrap stylesheet file: " . constant('bootstrap') . "<br>";
